@@ -1,3 +1,12 @@
+import Dashboard from "@/components/icons/dashboard";
+import Workflows from "@/components/icons/workflows";
+import Settings from "@/components/icons/settings";
+import Connections from "@/components/icons/connections";
+import Billing from "@/components/icons/billing";
+import Templates from "@/components/icons/templates";
+import Logs from "@/components/icons/logs";
+import React from "react";
+
 export const clients = [...new Array(10)].map(((_, idx) => ({
   href: `/${idx + 1}.png`
 })))
@@ -83,6 +92,44 @@ export const products: { title: string, link: string, thumbnail: string }[] = [
   },
 ]
 
-export const menuOptions = [
-  {name:'Dashboard',href:'/dashboard'},
+export const menuOptions: {
+  name: string;
+  component: ({selected}: { selected: boolean; }) => React.JSX.Element;
+  href: string
+}[] = [
+  {
+    name: 'Dashboard',
+    component: Dashboard,
+    href: '/dashboard',
+  },
+  {
+    name: 'Workflows',
+    component: Workflows,
+    href: '/workflows'
+  },
+  {
+    name: 'Settings',
+    component: Settings, href:
+      '/settings'
+  },
+  {
+    name: 'Connections',
+    component: Connections,
+    href: '/connections'
+  },
+  {
+    name: 'Billing',
+    component: Billing,
+    href: '/billing'
+  },
+  {
+    name: 'Templates',
+    component: Templates,
+    href: '/templates'
+  },
+  {
+    name: 'Logs',
+    component: Logs,
+    href: '/logs'
+  },
 ]
