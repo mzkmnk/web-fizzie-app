@@ -82,3 +82,7 @@ export const products: { title: string, link: string, thumbnail: string }[] = [
     thumbnail: '/p3.png',
   },
 ]
+
+export const menuOptions = [
+  {name:'Dashboard',href:'/dashboard'},
+]
